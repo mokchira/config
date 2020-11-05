@@ -1,0 +1,36 @@
+#if
+snippet if
+if (${1:true}) 
+{
+    ${0:${VISUAL}}
+}
+endsnippet
+
+snippet VkAttachmentDescription
+VkAttachmentDescription $1 = {
+	.flags          = ${2:0},
+	.format         = $3,
+	.samples        = ${4:VK_SAMPLE_COUNT_1_BIT},
+	.loadOp         = ${5:VK_ATTACHMENT_LOAD_OP_CLEAR},
+	.storeOp        = ${6:VK_ATTACHMENT_STORE_OP_STORE},
+	.stencilLoadOp  = ${7:VK_ATTACHMENT_LOAD_OP_DONT_CARE},
+	.stencilStoreOp = ${8:VK_ATTACHMENT_STORE_OP_DONT_CARE},
+	.initialLayout  = ${9:VK_IMAGE_LAYOUT_UNDEFINED},
+	.finalLayout    = $10,
+};
+endsnippet
+
+snippet VkSubpassDescription
+VkSubpassDescription $1 = {
+    .flags                   = ${2:0},
+    .pipelineBindPoint       = ${3:VK_PIPELINE_BIND_POINT_GRAPHICS},
+    .inputAttachmentCount    = ${4:0},
+    .pInputAttachments       = ${5:NULL},
+    .colorAttachmentCount    = ${6:0},
+    .pColorAttachments       = ${7:NULL},
+    .pResolveAttachments     = ${8:NULL},
+    .pDepthStencilAttachment = ${9:NULL},
+    .preserveAttachmentCount = ${10:0},
+    .pPreserveAttachments    = ${11:NULL},
+};
+endsnippet

@@ -1,0 +1,169 @@
+extends c
+
+snippet cl
+class ${1}
+{
+public:
+    ${2}
+private:
+};
+endsnippet
+
+# case
+snippet case
+case ${1:/* variable case */}:
+{
+    ${2}
+    ${3:break;}
+}
+endsnippet
+
+#if
+snippet if
+if (${1:true}) 
+{
+    ${0:${VISUAL}}
+}
+endsnippet
+
+snippet fore
+for (${1:const auto&} ${2:i} : ${3:container}) 
+{
+    ${4}
+}
+endsnippet
+
+snippet for
+for (int ${2:i} = 0; $2 < ${1:count}; $2${3:++}) 
+{
+    ${4}
+}
+endsnippet
+
+snippet vs
+std::vector<std::string> ${1}
+endsnippet
+
+snippet str "String" w
+std::string
+endsnippet
+
+snippet v "Vector" w
+std::vector<${1:T}> $2
+endsnippet
+
+snippet cmd
+class ${1:Name} : public command
+{
+public:
+    CMD_BASE("$1");
+    void set(${3}) {${4}}
+private:
+// parms
+    ${2}
+}
+endsnippet
+
+snippet ns
+namespace ${1:name}
+{
+
+${2}
+
+} // namespace $1
+endsnippet
+
+snippet guard
+#ifndef ${1:`!p snip.rv = (path).replace('/', '_').replace('.', '_').upper()`}
+#define $1
+
+${0}
+
+#endif /* end of include guard: $1 */
+endsnippet
+
+snippet bstate
+class $1 final : public BranchState
+{
+public:
+    const char* getName() const override { return "$1"; }
+    void handleEvent(event::Event*) override;
+    virtual ~$1() = default;
+    $1(StateArgs, Callbacks);
+private:
+    enum class Op : Option {};
+};
+endsnippet
+
+snippet lstate
+class $1 : public LeafState
+{
+public:
+    const char* getName() const override { return "$1"; }
+    void handleEvent(event::Event*) override;
+    $1(StateArgs, Callbacks);
+private:
+    void onEnterExt() override;
+};
+endsnippet
+
+snippet brstate
+class $1 : public BriefState
+{
+public:
+    const char* getName() const override { return "$1"; }
+    $1(StateArgs, Callbacks);
+private:
+    void onEnterExt() override;
+};
+endsnippet
+
+snippet bhimp
+void $1::handleEvent(event::Event* event)
+{
+    if (event->getCategory() == event::Category::CommandLine)
+	{
+        auto option = extractCommand(event);
+        if (!option) return;
+        switch (opcast<Op>(*option))
+		{
+			$2
+		}
+	}
+}
+endsnippet
+
+snippet lhimp
+void $1::handleEvent(event::Event* event)
+{
+    if (event->getCategory() == event::Category::CommandLine)
+	{
+		$2
+	}
+}
+endsnippet
+
+snippet cout
+std::cout << $1 << '\n';
+endsnippet
+
+snippet flush
+std::cout.flush();
+endsnippet
+
+snippet cerr
+std::cerr << $1 << '\n';
+endsnippet
+
+snippet command
+class $1 : public Command
+{
+public:
+    void execute(Application*) override;\
+    const char* getName() const override {return "$1";};
+	void set($2) {}
+	state::Report* makeReport() const override;
+private:
+	$3
+}
+endsnippet

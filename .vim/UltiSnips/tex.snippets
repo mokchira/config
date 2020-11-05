@@ -1,0 +1,42 @@
+snippet tableSimple "A simple table" b
+\\\\[.1in]
+\begin{tabular}{| l | r |}
+	\hline
+	$1
+\end{tabular}
+endsnippet
+
+snippet r "Insert a simple row" b
+${1:parm} & ${2:value} \\\\ \hline
+endsnippet
+
+snippet c "Create code snippet" b
+\begin{lstlisting}
+$1
+\end{lstlisting}
+endsnippet
+
+snippet g "Make graphic"
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.3\linewidth]{$1}
+\end{figure}
+endsnippet
+
+global !p
+def fix_indent(snip):
+    vim.eval('feedkeys("\<c-d>")')
+endglobal
+
+post_expand "fix_indent(snip)"
+snippet it "Individual item" b
+\item $0
+endsnippet
+
+snippet vf
+\vfill $0
+endsnippet
+
+snippet pa
+\pause
+endsnippet

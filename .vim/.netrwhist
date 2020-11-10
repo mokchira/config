@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/home/michaelb/dev/painter/shaders'
 let g:netrw_dirhist_2='/home/michaelb/dev/shaderboy/shaders'
 let g:netrw_dirhist_3='/home/michaelb/dev/painter/shaders'
 let g:netrw_dirhist_4='/home/michaelb/dev/shaderboy/shaders'
 let g:netrw_dirhist_5='/home/michaelb/dev/curva/shaders'
 let g:netrw_dirhist_6='/home/michaelb/.vim'
+let g:netrw_dirhist_7='/home/michaelb/dev/curva/shaders'

@@ -6,23 +6,44 @@ if (${1:true})
 }
 endsnippet
 
-snippet VkAttachmentDescription
-VkAttachmentDescription $1 = {
-	.flags          = ${2:0},
-	.format         = $3,
-	.samples        = ${4:VK_SAMPLE_COUNT_1_BIT},
-	.loadOp         = ${5:VK_ATTACHMENT_LOAD_OP_CLEAR},
-	.storeOp        = ${6:VK_ATTACHMENT_STORE_OP_STORE},
-	.stencilLoadOp  = ${7:VK_ATTACHMENT_LOAD_OP_DONT_CARE},
-	.stencilStoreOp = ${8:VK_ATTACHMENT_STORE_OP_DONT_CARE},
-	.initialLayout  = ${9:VK_IMAGE_LAYOUT_UNDEFINED},
-	.finalLayout    = $10,
+snippet sw
+switch ($1)
+{
+	case $2: $3
+}
+endsnippet
+
+snippet VkRenderPassCreateInfo
+VkRenderPassCreateInfo $1 = {
+    .sType            = VK_STRUCTURE_TYPE_RENDER_PASS_CREATE_INFO,
+    .pNext            = ${2:NULL},
+    .flags            = ${3:0},
+    .attachmentCount  = ${4:0},
+    .pAttachments     = ${5:NULL},
+    .subpassCount     = ${6:0},
+    .pSubpasses       = ${7:NULL},
+    .dependencyCount  = ${8:0},
+    .pDependencies    = ${9:NULL}
 };
 endsnippet
 
-snippet VkSubpassDescription
+snippet VkAttachmentDescription
+VkAttachmentDescription $1 = {
+    .flags          = ${2:0}, 
+    .format         = ${3:VK_FORMAT_R8G8B8A8_UNORM},
+    .samples        = ${4:VK_SAMPLE_COUNT_1_BIT},
+    .loadOp         = ${5:VK_ATTACHMENT_LOAD_OP_DONT_CARE},
+    .storeOp        = ${6:VK_ATTACHMENT_LOAD_OP_DONT_CARE},
+    .stencilLoadOp  = ${7:VK_ATTACHMENT_LOAD_OP_DONT_CARE},
+    .stencilStoreOp = ${8:VK_ATTACHMENT_STORE_OP_DONT_CARE},
+    .initialLayout  = ${9:VK_IMAGE_LAYOUT_UNDEFINED},
+    .finalLayout    = ${10:VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL}
+};
+endsnippet
+
+snippet VkSubpassDescription 
 VkSubpassDescription $1 = {
-    .flags                   = ${2:0},
+    .flags                   = ${2:0}, 
     .pipelineBindPoint       = ${3:VK_PIPELINE_BIND_POINT_GRAPHICS},
     .inputAttachmentCount    = ${4:0},
     .pInputAttachments       = ${5:NULL},
@@ -30,7 +51,57 @@ VkSubpassDescription $1 = {
     .pColorAttachments       = ${7:NULL},
     .pResolveAttachments     = ${8:NULL},
     .pDepthStencilAttachment = ${9:NULL},
-    .preserveAttachmentCount = ${10:0},
-    .pPreserveAttachments    = ${11:NULL},
+    .preserveAttachmentCount = ${10:NULL},
+    .pPreserveAttachments    = ${11:NULL}
+};
+endsnippet
+
+snippet VkSubpassDependency 
+VkSubpassDependency $1 = {
+    .srcSubpass      = ${2:VK_SUBPASS_EXTERNAL},
+    .dstSubpass      = ${3:VK_SUBPASS_EXTERNAL},
+    .srcStageMask    = ${4:VK_PIPELINE_STAGE_TOP_OF_PIPE_BIT},
+    .dstStageMask    = ${5:VK_PIPELINE_STAGE_BOTTOM_OF_PIPE_BIT},
+    .srcAccessMask   = ${6:0},
+    .dstAccessMask   = ${7:0},
+    .dependencyFlags = ${8:VK_DEPENDENCY_BY_REGION_BIT}
+};
+endsnippet
+
+snippet VkAttachmentReference
+VkAttachmentReference $1 = {
+    .attachment = ${2:0},
+    .layout     = ${3:VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL}
+};
+endsnippet
+
+snippet VkFramebufferCreateInfo
+VkFramebufferCreateInfo $1 = {
+    .sType           = VK_STRUCTURE_TYPE_FRAMEBUFFER_CREATE_INFO,
+    .pNext           = ${2:NULL},
+    .flags           = ${3:0},
+    .renderPass      = ${4},
+    .attachmentCount = ${5:0},
+    .pAttachments    = ${6:NULL},
+    .width           = ${7:1},
+    .height          = ${8:1},
+    .layers          = ${9:1}
+};
+endsnippet
+
+snippet VkMemoryBarrier
+VkMemoryBarrier $1 = {
+    .sType         = VK_STRUCTURE_TYPE_MEMORY_BARRIER,
+    .pNext         = ${2:NULL},
+    .srcAccessMask = ${3:0},
+    .dstAccessMask = ${4:0}
+};
+endsnippet
+
+snippet VkDescriptorImageInfo
+VkDescriptorImageInfo $1 = {
+    .sampler     = $2,
+    .imageView   = $3,
+    .imageLayout = $4
 };
 endsnippet

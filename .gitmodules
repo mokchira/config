@@ -10,9 +10,6 @@
 [submodule ".vim/plugged/echodoc.vim"]
 	path = .vim/plugged/echodoc.vim
 	url = https://github.com/Shougo/echodoc.vim
-[submodule ".vim/plugged/scrollbar.nvim"]
-	path = .vim/plugged/scrollbar.nvim
-	url = https://github.com/Xuyuanp/scrollbar.nvim
 [submodule ".vim/plugged/tabular"]
 	path = .vim/plugged/tabular
 	url = https://github.com/godlygeek/tabular

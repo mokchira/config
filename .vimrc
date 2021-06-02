@@ -4,7 +4,7 @@ filetype off                  " required
 call plug#begin('~/.vim/plugged')
 
 Plug 'lervag/vimtex'
-Plug 'drichardson/vex.vim'
+"Plug 'drichardson/vex.vim'
 Plug 'tikhomirov/vim-glsl'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'octol/vim-cpp-enhanced-highlight'

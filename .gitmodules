@@ -1,0 +1,33 @@
+[submodule ".vim/plugged/FastFold"]
+	path = .vim/plugged/FastFold
+	url = https://github.com/Konfekt/FastFold
+[submodule ".vim/plugged/coc.nvim"]
+	path = .vim/plugged/coc.nvim
+	url = https://github.com/neoclide/coc.nvim
+[submodule ".vim/plugged/dracula"]
+	path = .vim/plugged/dracula
+	url = https://github.com/dracula/vim
+[submodule ".vim/plugged/echodoc.vim"]
+	path = .vim/plugged/echodoc.vim
+	url = https://github.com/Shougo/echodoc.vim
+[submodule ".vim/plugged/scrollbar.nvim"]
+	path = .vim/plugged/scrollbar.nvim
+	url = https://github.com/Xuyuanp/scrollbar.nvim
+[submodule ".vim/plugged/tabular"]
+	path = .vim/plugged/tabular
+	url = https://github.com/godlygeek/tabular
+[submodule ".vim/plugged/ultisnips"]
+	path = .vim/plugged/ultisnips
+	url = https://github.com/SirVer/ultisnips
+[submodule ".vim/plugged/vim-cpp-enhanced-highlight"]
+	path = .vim/plugged/vim-cpp-enhanced-highlight
+	url = https://github.com/octol/vim-cpp-enhanced-highlight
+[submodule ".vim/plugged/vimtex"]
+	path = .vim/plugged/vimtex
+	url = https://github.com/lervag/vimtex
+[submodule ".vim/plugged/vim-glsl"]
+	path = .vim/plugged/vim-glsl
+	url = https://github.com/tikhomirov/vim-glsl
+[submodule ".vim/plugged/vim-snippets"]
+	path = .vim/plugged/vim-snippets
+	url = https://github.com/tikhomirov/vim-glsl

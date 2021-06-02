@@ -4,13 +4,11 @@ filetype off                  " required
 call plug#begin('~/.vim/plugged')
 
 Plug 'lervag/vimtex'
-"Plug 'drichardson/vex.vim'
-Plug 'tikhomirov/vim-glsl'
+Plug 'mokchira/vim-glsl'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'Konfekt/FastFold'
 Plug 'godlygeek/tabular'
-Plug 'Xuyuanp/scrollbar.nvim'
 " --UltiSnips--
 " Track the engine.
 Plug 'SirVer/ultisnips'

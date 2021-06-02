@@ -129,12 +129,16 @@ alias hdev="source houdini_dev_init"
 alias mus="cd ~/scenes/muscles/explore"
 alias 180="cd /opt/hfs18.0/ ; source houdini_setup ; cd -"
 alias 185="cd /opt/hfs18.5/ ; source houdini_setup ; cd -"
-alias 186="cd /opt/hfs18.6/ ; source houdini_setup ; cd -"
+alias 19="cd /opt/hfs19.0/ ; source houdini_setup ; cd -"
 alias spikes="steam steam://rungameid/260790"
 alias sw="cd ~/dev/sword ; source .setenv.sh ; ./.startup.sh "
 alias light=" 185 ; cd ~/scenes/light_tunnel ; source .setenv.sh ; source .hip.sh"
 alias ue4="/home/michaelb/dev/unreal/UnrealEngine-release/Engine/Binaries/Linux/UE4Editor"
+alias fk="urxvt &"
 alias vim=nvim
+alias todo=todo.sh
+alias lt="ls -ltr"
+alias gs="git status"
 
 export PYTHONSTARTUP=~/.pythonrc
 #export PYTHONPATH=/opt/hfs18.0/houdini/python2.7libs:/opt/hfs18.0/python/lib/python2.7/site-packages-ui-forced:/opt/hfs18.0/python/lib/python2.7/site-packages/pxr
@@ -148,10 +152,14 @@ export MUS=/home/michaelb/scenes/muscles/explore
 export LT=/home/michaelb/scenes/light_tunnel
 export PR=$LT/presentation
 export EDITOR=nvim
+export VISUAL="urxvt -e nvim"
 export CAGES=/home/michaelb/scenes/cages
 export SWORD=/home/michaelb/dev/sword
 export HOUDINI_TERMINAL_COMMAND="urxvt"
 export LD_LIBRARY_PATH=/home/michaelb/lib:$LD_LIBRARY_PATH
+export WINEPATH=/usr/x86_64-w64-mingw32/lib:/home/michaelb/lib
+#export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python
+#export PATH=$PATH:/home/michaelb/dev/USD/build/bin
 
 I3CONF=/home/michaelb/.config/i3/config
 

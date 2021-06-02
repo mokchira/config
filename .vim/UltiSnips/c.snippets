@@ -13,6 +13,13 @@ switch ($1)
 }
 endsnippet
 
+snippet for
+for (int ${2:i} = ${3:0}; $2 < ${1:count}; $2++)
+{
+	$4
+}
+endsnippet
+
 snippet VkRenderPassCreateInfo
 VkRenderPassCreateInfo $1 = {
     .sType            = VK_STRUCTURE_TYPE_RENDER_PASS_CREATE_INFO,
@@ -103,5 +110,13 @@ VkDescriptorImageInfo $1 = {
     .sampler     = $2,
     .imageView   = $3,
     .imageLayout = $4
+};
+endsnippet
+
+snippet VkPushConstantRange
+VkPushConstantRange $1 = {
+    .stageFlags = $2,
+    .offset     = ${3:0},
+    .size       = ${4}
 };
 endsnippet

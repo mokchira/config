@@ -28,4 +28,4 @@ fi
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 export EDITOR=nvim
-export TERM=xterm-256color #to fix urxvt clear command issue
+export TERM=urxvt 

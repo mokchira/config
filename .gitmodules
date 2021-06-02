@@ -27,7 +27,7 @@
 	url = https://github.com/lervag/vimtex
 [submodule ".vim/plugged/vim-glsl"]
 	path = .vim/plugged/vim-glsl
-	url = https://github.com/tikhomirov/vim-glsl
+	url = https://github.com/mokchira/vim-glsl
 [submodule ".vim/plugged/vim-snippets"]
 	path = .vim/plugged/vim-snippets
 	url = https://github.com/tikhomirov/vim-glsl
